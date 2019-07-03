@@ -1,6 +1,4 @@
 import calculateDeadline from "../modules/calculate";
-import moment from "moment";
-moment.locale("ja");
 
 /**
  * The special case in Japanese: 納期の特例

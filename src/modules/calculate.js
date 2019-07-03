@@ -1,4 +1,5 @@
 import moment from "moment";
+moment.locale("ja");
 
 export default function calculateDeadline (year, month, date) {
     const deadline = moment().year(year).month(month-1).date(date);
