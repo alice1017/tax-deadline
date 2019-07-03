@@ -1,18 +1,18 @@
 import assert from "power-assert";
-import withHolding from "../dist/modules/withholding";
+import Tax from "../dist";
 
-describe("Test of the `withHolding`", () => {
+describe("Test of the `Tax.withholding`", () => {
 
     // 曜日：0:日, 1:月, 2:火, 3:水, 4:木, 5:金, 6:土
 
     it("1. should be normal deadline (10th every month)", () => {
-        const deadline = withHolding(2019, 7);
+        const deadline = Tax.withholding(2019, 7);
         assert(deadline.date() === 10);
         assert(deadline.day() === 3);
     });
 
     it("2. should be 20th deadline (use special case)", () => {
-        const deadline = withHolding(2017, 1, {
+        const deadline = Tax.withholding(2017, 1, {
             useSpecialCase: true
         });
         assert(deadline.date() === 20);
@@ -20,7 +20,7 @@ describe("Test of the `withHolding`", () => {
     });
 
     it("3. should be move deadline date (use special case)", () => {
-        const deadline = withHolding(2019, 1, {
+        const deadline = Tax.withholding(2019, 1, {
             useSpecialCase: true
         });
         assert(deadline.date() === 21);
@@ -28,7 +28,7 @@ describe("Test of the `withHolding`", () => {
     });
 
     it("4. should be move deadline date (10th every month)", () => {
-        const deadline = withHolding(2018, 11);
+        const deadline = Tax.withholding(2018, 11);
         assert(deadline.date() === 12);
         assert(deadline.day() === 1);
     });
