@@ -1,5 +1,7 @@
 # tax-deadline
 
+[![Build Status](https://travis-ci.org/alice1017/tax-deadline.svg?branch=master)](https://travis-ci.org/alice1017/tax-deadline)
+
 This module calculate a **deadline** of the **Japanese tax payment**.
 
 ## Category of the tax
