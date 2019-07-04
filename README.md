@@ -4,6 +4,12 @@
 
 This module calculate a **deadline** of the **Japanese tax payment**.
 
+---
+
+**tax-deadline is UNDER DEVELOPMENT.**
+
+---
+
 ## Category of the tax
 
 | Japanese | English              |
@@ -21,7 +27,3 @@ const deadline = Tax.corporate(2019, 3);
 console.log(deadline.format("YYYY年MM月DD日(ddd)");
 // -> 2019年4月1日（月）
 ```
-
----
-
-**tax-deadline is UNDER DEVELOPMENT.**
